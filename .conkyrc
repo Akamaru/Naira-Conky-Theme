@@ -39,54 +39,48 @@ xftfont caviar dreams:size=8
 xftalpha 0.5
 uppercase no
 
-default_color 6F96F9
-color0 Royalblue3	
-color1 Grey		
-color2 6F96F9	
-color3 Royalblue3
-color4 6F96F9	
-color5 DDDDDD
-color6 AAAAAA
-color7 888888
-color8 666666
-color9 FFFFFF
+color0 FFFFFF
+color1 7F006E		
+color2 FF7FED	
+color3 C4C4C4
+color4 ADADAD	
+color5 636363
 
 TEXT
-${color9}${font :Bold:size=14} $alignc ${time %H}:${time %M}:${time %S} Uhr
-${color}${font :Bold:size=14} $alignc ${time %d}. ${time %B} ${time %Y}${font :Bold:size=08} 
-$alignc${time %A}
-${color8}$alignc Uptime $uptime
-${color}$alignc $sysname | $kernel | $nodename | $machine
-${color9}CPU & Memory $hr:
-${color}CPU Auslastung${color0}$alignr${cpubar 8,130} ${color1}$cpu%@${freq_g cpu}GHz
+${color2}${font :Bold:size=12} $alignc ${time %H}:${time %M}:${time %S} Uhr
+${color2}${font :Bold:size=12} $alignc ${time %d}. ${time %B} ${time %Y}${font :Bold:size=08} 
+${color2}$alignc${time %A}
+${color2}$alignc Uptime $uptime
+${color2}$alignc $sysname | $kernel | $nodename | $machine
+${color0}CPU & Memory $hr:
+${color2}CPU Auslastung${color1}$alignr${cpubar 8,130} ${color2}$cpu%@${freq_g cpu}GHz
 ${color1}${cpugraph 15,320 000000 ff0000}
-${color}RAM ${alignr}${color1}$mem / $memmax ($memperc%)
-${color0}${membar 8}
-${color}SWAP ${alignr}${color1}$swap / $swapmax ($swapperc%)
-${color0}${swapbar 8}
-${color}Prozesse $alignr CPU% MEM%
-${color6}${top name 1}$alignr${top cpu 1} ${top mem 1}
-${color7}${top name 2}$alignr${top cpu 2} ${top mem 2}
-${color8}${top name 3}$alignr${top cpu 3} ${top mem 3}
-${color8}${top name 4}$alignr${top cpu 4} ${top mem 4}
-${color8}${top name 5}$alignr${top cpu 5} ${top mem 5}
+${color2}RAM ${alignr}$mem / $memmax ($memperc%)
+${color1}${membar 8}
+${color2}SWAP ${alignr}$swap / $swapmax ($swapperc%)
+${color1}${swapbar 8}
+${color2}Prozesse $alignr CPU% MEM%
+${color3}${top name 1}$alignr${top cpu 1} ${top mem 1}
+${color4}${top name 2}$alignr${top cpu 2} ${top mem 2}
+${color5}${top name 3}$alignr${top cpu 3} ${top mem 3}
+${color5}${top name 4}$alignr${top cpu 4} ${top mem 4}
+${color5}${top name 5}$alignr${top cpu 5} ${top mem 5}
 
-${color4}Festplatten		Größe	  Benutzt
-${color1}Root${color1}(${fs_type /})${alignr}${color5}${fs_size /}>${color6}${fs_used /}${color0}${alignr}${fs_bar 8,75 /} ${color7}(${fs_used_perc /}%)
-${color1}Glurak${color1}(${fs_type /home/akamaru/Festplatten/Glurak/})${alignr}${color5}${fs_size /home/akamaru/Festplatten/Glurak/}>${color6}${fs_used /home/akamaru/Festplatten/Glurak/}${color0}${alignr}${fs_bar 8,75  /home/akamaru/Festplatten/Glurak/} ${color7}(${fs_used_perc /home/akamaru/Festplatten/Glurak/}%)
-${color1}Karnimani${color1}(${fs_type})${alignr}${color5}${fs_size /home/akamaru/Festplatten/Karnimani/}>${color6}${fs_used /home/akamaru/Festplatten/Karnimani/}${color0}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Karnimani/} ${color7}(${fs_used_perc /home/akamaru/Festplatten/Karnimani/}%)
-${color1}Mautzi${color1}(${fs_type /home/akamaru/Festplatten/Karnimani/})${alignr}${color5}${fs_size /home/akamaru/Festplatten/Mautzi/}>${color6}${fs_used /home/akamaru/Festplatten/Mautzi/}${color0}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Mautzi/} ${color7}(${fs_used_perc /home/akamaru/Festplatten/Mautzi/}%)
-${color1}Pikachu${color1}(${fs_type /home/akamaru/Festplatten/Pikachu/})${alignr}${color5}${fs_size /home/akamaru/Festplatten/Pikachu/}>${color6}${fs_used /home/akamaru/Festplatten/Pikachu/}${color0}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Pikachu/} ${color7}(${fs_used_perc /home/akamaru/Festplatten/Pikachu/}%)
-#${color3}SSD Read-> ${alignc}${color2}${diskio_read}/s ${alignr}${color3}${diskio_write}/s ${color7}<-HDD Write
-#${color1}${diskiograph_read 10,150 000000 ff0000} ${alignr}${color1}${diskiograph_write 10,150 000000 ff0000}$color
-${color9}Netzwerk $hr:
-${color4}WLAN${color} ${alignr}${color7}IP ${addr wlan0}
-${color3}Download ${color2}${downspeed wlan0}/s ${alignr} $alignr${color3}Upload ${color3} ${upspeed wlan0}/s
-${color}${downspeedgraph wlan0 15,140} ${alignr}${color}${upspeedgraph wlan0 15,140}
-${color7}Total Download ${color2}${totaldown wlan0} ${alignr}${color7}Total Upload ${color3}${totalup wlan0}
+${color2}Festplatten		Größe	  Benutzt
+${color2}Root${color1}(${fs_type /})${alignr}${color3}${fs_size /}>${color4}${fs_used /}${color1}${alignr}${fs_bar 8,75 /} ${color2}(${fs_used_perc /}%)
+${color2}Glurak${color1}(${fs_type /home/akamaru/Festplatten/Glurak/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Glurak/}>${color4}${fs_used /home/akamaru/Festplatten/Glurak/}${color1}${alignr}${fs_bar 8,75  /home/akamaru/Festplatten/Glurak/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Glurak/}%)
+${color2}Karnimani${color1}(${fs_type /home/akamaru/Festplatten/Karnimani/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Karnimani/}>${color4}${fs_used /home/akamaru/Festplatten/Karnimani/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Karnimani/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Karnimani/}%)
+${color2}Mautzi${color1}(${fs_type /home/akamaru/Festplatten/Karnimani/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Mautzi/}>${color4}${fs_used /home/akamaru/Festplatten/Mautzi/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Mautzi/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Mautzi/}%)
+${color2}Pikachu${color1}(${fs_type /home/akamaru/Festplatten/Pikachu/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Pikachu/}>${color4}${fs_used /home/akamaru/Festplatten/Pikachu/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Pikachu/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Pikachu/}%)
+${color0}Netzwerk $hr:
+${color4}WLAN${color2} ${alignr}${color2}IP ${addr wlan0}
+${color2}Download ${downspeed wlan0}/s ${alignr} $alignr Upload ${upspeed wlan0}/s
+${color1}${downspeedgraph wlan0 15,140} ${alignr}${upspeedgraph wlan0 15,140}
+${color2}Total Download ${totaldown wlan0} ${alignr}Total Upload ${totalup wlan0}
 
-${color4}LAN${color} ${alignr}${color7}IP ${addr eth0}
-${color3}Download ${color2}${downspeed eth0}/s ${alignr} $alignr${color3}Upload ${color3} ${upspeed eth0}/s
-${color}${downspeedgraph eth0 15,140} ${alignr}${color}${upspeedgraph eth0 15,140}
-${color7}Total Download ${color2}${totaldown eth0} ${alignr}${color7}Total Upload ${color3}${totalup eth0}
-${image ~/.conky/Naira.png -p 0,10 -s 75x75}
+${color4}LAN${color2} ${alignr}${color2}IP ${addr eth0}
+${color2}Download ${downspeed eth0}/s ${alignr} $alignr Upload ${upspeed eth0}/s
+${color1}${downspeedgraph eth0 15,140} ${alignr}${upspeedgraph eth0 15,140}
+${color2}Total Download ${totaldown eth0} ${alignr}Total Upload ${totalup eth0}
+${image ~/.conky/Naira.png -p 245,5 -s 75x75}
+${image ~/.conky/Yagyuu.png -p 5,5 -s 75x75}
