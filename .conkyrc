@@ -72,6 +72,8 @@ ${color2}Glurak${color1}(${fs_type /home/akamaru/Festplatten/Glurak/})${alignr}$
 ${color2}Karnimani${color1}(${fs_type /home/akamaru/Festplatten/Karnimani/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Karnimani/}>${color4}${fs_used /home/akamaru/Festplatten/Karnimani/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Karnimani/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Karnimani/}%)
 ${color2}Mautzi${color1}(${fs_type /home/akamaru/Festplatten/Karnimani/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Mautzi/}>${color4}${fs_used /home/akamaru/Festplatten/Mautzi/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Mautzi/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Mautzi/}%)
 ${color2}Pikachu${color1}(${fs_type /home/akamaru/Festplatten/Pikachu/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Pikachu/}>${color4}${fs_used /home/akamaru/Festplatten/Pikachu/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Pikachu/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Pikachu/}%)
+${color0}RSS $hr:
+${color2}${execi 1 /home/akamaru/.conky/rss.pl}
 ${color0}Netzwerk $hr:
 ${color4}WLAN${color2} ${alignr}${color2}IP ${addr wlan0}
 ${color2}Download ${downspeed wlan0}/s ${alignr} $alignr Upload ${upspeed wlan0}/s
