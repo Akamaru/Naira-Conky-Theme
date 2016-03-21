@@ -75,14 +75,14 @@ ${color2}Pikachu${color1}(${fs_type /home/akamaru/Festplatten/Pikachu/})${alignr
 ${color0}RSS $hr:
 ${color2}${execi 1 /home/akamaru/.conky/rss.pl}
 ${color0}Netzwerk $hr:
-${color4}WLAN${color2} ${alignr}${color2}IP ${addr wlan0}
-${color2}Download ${downspeed wlan0}/s ${alignr} $alignr Upload ${upspeed wlan0}/s
-${color1}${downspeedgraph wlan0 15,140} ${alignr}${upspeedgraph wlan0 15,140}
-${color2}Total Download ${totaldown wlan0} ${alignr}Total Upload ${totalup wlan0}
+${color4}WLAN${color2} ${alignr}${color2}IP ${addr wlp3s0}
+${color2}Download ${downspeed wlp3s0}/s ${alignr} $alignr Upload ${upspeed wlp3s0}/s
+${color1}${downspeedgraph wlp3s0 15,140} ${alignr}${upspeedgraph wlp3s0 15,140}
+${color2}Total Download ${totaldown wlp3s0} ${alignr}Total Upload ${totalup wlp3s0}
 
-${color4}LAN${color2} ${alignr}${color2}IP ${addr eth0}
-${color2}Download ${downspeed eth0}/s ${alignr} $alignr Upload ${upspeed eth0}/s
-${color1}${downspeedgraph eth0 15,140} ${alignr}${upspeedgraph eth0 15,140}
-${color2}Total Download ${totaldown eth0} ${alignr}Total Upload ${totalup eth0}
+${color4}LAN${color2} ${alignr}${color2}IP ${addr enp4s0}
+${color2}Download ${downspeed enp4s0}/s ${alignr} $alignr Upload ${upspeed enp4s0}/s
+${color1}${downspeedgraph enp4s0 15,140} ${alignr}${upspeedgraph enp4s0 15,140}
+${color2}Total Download ${totaldown enp4s0} ${alignr}Total Upload ${totalup enp4s0}
 ${image ~/.conky/Naira.png -p 245,5 -s 75x75}
 ${image ~/.conky/Yagyuu.png -p 5,5 -s 75x75}
