@@ -47,11 +47,14 @@ color4 ADADAD
 color5 636363
 
 TEXT
+${image ~/.conky/Naira.png -p 245,5 -s 75x75}
+${image ~/.conky/Yagyuu.png -p 5,5 -s 75x75}
 ${color2}${font :Bold:size=12} $alignc ${time %H}:${time %M}:${time %S} Uhr
 ${color2}${font :Bold:size=12} $alignc ${time %d}. ${time %B} ${time %Y}${font :Bold:size=08} 
 ${color2}$alignc${time %A}
 ${color2}$alignc Uptime $uptime
 ${color2}$alignc $sysname | $kernel | $nodename | $machine
+
 ${color0}CPU & Memory $hr:
 ${color2}CPU Auslastung${color1}$alignr${cpubar 8,130} ${color2}$cpu%@${freq_g cpu}GHz
 ${color1}${cpugraph 15,320 000000 ff0000}
@@ -66,23 +69,17 @@ ${color5}${top name 3}$alignr${top cpu 3} ${top mem 3}
 ${color5}${top name 4}$alignr${top cpu 4} ${top mem 4}
 ${color5}${top name 5}$alignr${top cpu 5} ${top mem 5}
 
-${color2}Festplatten		Größe	  Benutzt
-${color2}Root${color1}(${fs_type /})${alignr}${color3}${fs_size /}>${color4}${fs_used /}${color1}${alignr}${fs_bar 8,75 /} ${color2}(${fs_used_perc /}%)
-${color2}Glurak${color1}(${fs_type /home/akamaru/Festplatten/Glurak/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Glurak/}>${color4}${fs_used /home/akamaru/Festplatten/Glurak/}${color1}${alignr}${fs_bar 8,75  /home/akamaru/Festplatten/Glurak/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Glurak/}%)
-${color2}Karnimani${color1}(${fs_type /home/akamaru/Festplatten/Karnimani/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Karnimani/}>${color4}${fs_used /home/akamaru/Festplatten/Karnimani/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Karnimani/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Karnimani/}%)
-${color2}Mautzi${color1}(${fs_type /home/akamaru/Festplatten/Karnimani/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Mautzi/}>${color4}${fs_used /home/akamaru/Festplatten/Mautzi/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Mautzi/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Mautzi/}%)
-${color2}Pikachu${color1}(${fs_type /home/akamaru/Festplatten/Pikachu/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Pikachu/}>${color4}${fs_used /home/akamaru/Festplatten/Pikachu/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Pikachu/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Pikachu/}%)
-${color0}RSS $hr:
-${color2}${execi 1 /home/akamaru/.conky/rss.pl}
-${color0}Netzwerk $hr:
-${color4}WLAN${color2} ${alignr}${color2}IP ${addr wlp3s0}
-${color2}Download ${downspeed wlp3s0}/s ${alignr} $alignr Upload ${upspeed wlp3s0}/s
-${color1}${downspeedgraph wlp3s0 15,140} ${alignr}${upspeedgraph wlp3s0 15,140}
-${color2}Total Download ${totaldown wlp3s0} ${alignr}Total Upload ${totalup wlp3s0}
+${color2}Festplatten	    Größe     Frei
+${color2}Root${color1}(${fs_type /})${alignr}${color3}${fs_size /}>${color4}${fs_free /}${color1}${alignr}${fs_bar 8,75 /} ${color2}(${fs_used_perc /}%)
+${color2}Dragoran${color1}(${fs_type /home/akamaru/Festplatten/Dragoran/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Dragoran/}>${color4}${fs_free /home/akamaru/Festplatten/Dragoran/}${color1}${alignr}${fs_bar 8,75  /home/akamaru/Festplatten/Dragoran/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Dragoran/}%)
+${color2}Glurak${color1}(${fs_type /home/akamaru/Festplatten/Glurak/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Glurak/}>${color4}${fs_free /home/akamaru/Festplatten/Glurak/}${color1}${alignr}${fs_bar 8,75  /home/akamaru/Festplatten/Glurak/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Glurak/}%)
+${color2}Karnimani${color1}(${fs_type /home/akamaru/Festplatten/Karnimani/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Karnimani/}>${color4}${fs_free /home/akamaru/Festplatten/Karnimani/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Karnimani/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Karnimani/}%)
+${color2}Mauzi${color1}(${fs_type /home/akamaru/Festplatten/Karnimani/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Mauzi/}>${color4}${fs_free /home/akamaru/Festplatten/Mauzi/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Mauzi/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Mauzi/}%)
+${color2}Pikachu${color1}(${fs_type /home/akamaru/Festplatten/Pikachu/})${alignr}${color3}${fs_size /home/akamaru/Festplatten/Pikachu/}>${color4}${fs_free /home/akamaru/Festplatten/Pikachu/}${color1}${alignr}${fs_bar 8,75 /home/akamaru/Festplatten/Pikachu/} ${color2}(${fs_used_perc /home/akamaru/Festplatten/Pikachu/}%)
 
-${color4}LAN${color2} ${alignr}${color2}IP ${addr enp4s0}
-${color2}Download ${downspeed enp4s0}/s ${alignr} $alignr Upload ${upspeed enp4s0}/s
-${color1}${downspeedgraph enp4s0 15,140} ${alignr}${upspeedgraph enp4s0 15,140}
-${color2}Total Download ${totaldown enp4s0} ${alignr}Total Upload ${totalup enp4s0}
-${image ~/.conky/Naira.png -p 245,5 -s 75x75}
-${image ~/.conky/Yagyuu.png -p 5,5 -s 75x75}
+${color0}Netzwerk $hr:
+${color4}LAN${color2} ${alignr}${color2}IP ${addr enp2s0}
+${color2}Download ${downspeed enp2s0}/s ${alignr} $alignr Upload ${upspeed enp2s0}/s
+${color1}${downspeedgraph enp2s0 15,140} ${alignr}${upspeedgraph enp2s0 15,140}
+${color2}Total Download ${totaldown enp2s0} ${alignr}Total Upload ${totalup enp2s0}
+
